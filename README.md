@@ -30,10 +30,12 @@ This application is inspired by this [article](https://ackarim.medium.com/how-to
 - To emulate different snackbar types in Angular Material pass different components to snackBar.openFromComponent() ?
 - I had problems with the MatSnackBar provider when I changed from module to standalone so I reverted back to modules. 
 - I converted to use action groups versus separate actions.
+- Created a new branch and used the angular cli to convert the project from modules to standalone components
+- Converting from modules to standalones, it is best to run `ng generate @angular/core:standalone` on a new branch and start from top to bottom, running the project after each step of the conversion.  
 
 ## Continued Development
 
-- Module to Standalone
+- use snackBar.openFromComponent to vary the snackbar look for different actions ?
 
 ## Useful Resources
 
@@ -49,3 +51,4 @@ This application is inspired by this [article](https://ackarim.medium.com/how-to
 - [Stack Blitz](https://stackblitz.com/edit/angular-material-consecutive-snackbars-canwzv?file=src%2Fapp%2Fapp.component.ts) - angular material consecutive snackbars
 - [Blog](https://timdeschryver.dev/blog/start-using-ngrx-effects-for-this#handling-the-flow-of-a-a-classmark-mark-hover-hrefhttps-materialangulario-components-dialog-overview-relexternal-data-with-favicon-style--favicon--urlhttps---v1indieweb-avatar11tydev-https3a2f2fmaterialangularioangular-material-a-dialog) - start using ngrx effects for this
 - [This is Angular](https://this-is-angular.github.io/ngrx-essentials-course/docs/chapter-11/) - ngrx essentials course
+- [Angular Docs](https://angular.io/guide/standalone-migration) - standalone migration

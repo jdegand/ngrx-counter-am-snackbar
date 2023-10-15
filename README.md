@@ -23,19 +23,20 @@ This application is inspired by this [article](https://ackarim.medium.com/how-to
 
 ## Thoughts
 
-- Few (current) examples of ngrx effects with an Angular Material SnackBar.
+- There are few (current) examples of ngrx effects with an Angular Material SnackBar.
 - The [original repo](https://github.com/ackuser/angular-ngrx-ngx-toastr) used ngx toastr and a ngrx global store. 
 - There are no actions in a component store so I am unsure how I would convert this to use a component store instead.   
 - There was some duplication in effects to take advantage of toastr's different snackbar types. 
 - To emulate different snackbar types in Angular Material pass different components to snackBar.openFromComponent() ?
 - I had problems with the MatSnackBar provider when I changed from module to standalone so I reverted back to modules. 
 - I converted to use action groups versus separate actions.
-- Created a new branch and used the angular cli to convert the project from modules to standalone components
+- I created a new branch and used the angular cli to convert the project from modules to standalone components.
 - Converting from modules to standalones, it is best to run `ng generate @angular/core:standalone` on a new branch and start from top to bottom, running the project after each step of the conversion.  
+- You could use panelClass to change the look of snackbars.  But I don't think this would work without multiple effects.
 
 ## Continued Development
 
-- use snackBar.openFromComponent to vary the snackbar look for different actions ?
+- Vary the snackbar look for different actions
 
 ## Useful Resources
 
@@ -52,3 +53,4 @@ This application is inspired by this [article](https://ackarim.medium.com/how-to
 - [Blog](https://timdeschryver.dev/blog/start-using-ngrx-effects-for-this#handling-the-flow-of-a-a-classmark-mark-hover-hrefhttps-materialangulario-components-dialog-overview-relexternal-data-with-favicon-style--favicon--urlhttps---v1indieweb-avatar11tydev-https3a2f2fmaterialangularioangular-material-a-dialog) - start using ngrx effects for this
 - [This is Angular](https://this-is-angular.github.io/ngrx-essentials-course/docs/chapter-11/) - ngrx essentials course
 - [Angular Docs](https://angular.io/guide/standalone-migration) - standalone migration
+- [Medium](https://anglesvar.medium.com/add-custom-css-to-material-snackbar-91ed36b48fba) = add custom css to material snackbar

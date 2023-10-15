@@ -2,7 +2,7 @@
 
 NgRx Counter with Angular Material Snackbar
 
-This application is inspired by this [article](https://ackarim.medium.com/how-to-manage-your-notifications-in-angular-ngrx-inside-effects-as-a-side-actions-6cc09ec44646). 
+This application is inspired by this [article](https://ackarim.medium.com/how-to-manage-your-notifications-in-angular-ngrx-inside-effects-as-a-side-actions-6cc09ec44646) and derivative of this [repo](https://github.com/ackuser/angular-ngrx-ngx-toastr). 
 
 ## Screenshots
 
@@ -27,12 +27,11 @@ This application is inspired by this [article](https://ackarim.medium.com/how-to
 - The [original repo](https://github.com/ackuser/angular-ngrx-ngx-toastr) used ngx toastr and a ngrx global store. 
 - There are no actions in a component store so I am unsure how I would convert this to use a component store instead.   
 - There was some duplication in effects to take advantage of toastr's different snackbar types. 
-- To emulate different snackbar types in Angular Material pass different components to snackBar.openFromComponent() ?
-- I had problems with the MatSnackBar provider when I changed from module to standalone so I reverted back to modules. 
+- To emulate different snackbar types in Angular Material, you can pass different components to snackBar.openFromComponent() or use panelClass.
+- I think each different snackbar would require a matching effect.  Right now, the project has just one effect for the snackbar.  
 - I converted to use action groups versus separate actions.
 - I created a new branch and used the angular cli to convert the project from modules to standalone components.
-- Converting from modules to standalones, it is best to run `ng generate @angular/core:standalone` on a new branch and start from top to bottom, running the project after each step of the conversion.  
-- You could use panelClass to change the look of snackbars.  But I don't think this would work without multiple effects.
+- When converting from modules to standalones, it is best to run `ng generate @angular/core:standalone` on a new branch and start from top to bottom, running the project after each step of the conversion.  
 
 ## Continued Development
 
